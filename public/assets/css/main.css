@@ -1,0 +1,158 @@
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+.alert {
+    border-radius: 0;
+}
+
+.form-label {
+    margin-bottom: 0;
+}
+
+.alert-fixed-z-index {
+    position: fixed;
+    top: 11px;
+    right: 1px;
+    z-index: 1030
+}
+
+.fs-13 {
+    font-size: 13px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.form-select:focus,
+.form-control .btn:active,
+.btn:focus .uneditable-input:focus {
+    border-color: none;
+    outline: 0 none;
+    border: 1px solid #a9d158 !important;
+    box-shadow: none !important;
+}
+
+.bg-placeholder {
+    color: #cecece !important;
+}
+
+.d-color, .m-color {
+    color: rgb(0, 98, 242);
+}
+
+.d-border {
+    border: 1px solid #5b5b5b47;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+@media (max-width: 868px) {
+    .md-text-center {
+        text-align: center !important;
+    }
+
+    .md-d-none {
+        display: none;
+    }
+}
+
+.alert-notice {
+    color: #0b6487;
+    background: #cff3ff;
+}
+
+.alert {
+    border-radius: 0;
+}
+
+::placeholder {
+    color: #696969 !important;
+}
+
+.cursor-help {
+    cursor: help;
+}
+
+.modal-content {
+    border: 1px solid #4444448e;
+}
+
+body {
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,124 @@
+p, td, td > *, a, form > span {
+    font-size: 15px !important;
+}
+
+label, label:not(.form-check-label):not(.custom-file-label){
+    margin-bottom: 1px;
+    font-weight: 500;
+}
+
+.btn {
+    text-transform: capitalize;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+.btn-outline-secondary{
+    text-transform: capitalize;
+    border-radius: 3px;
+    padding: 6px 10px;
+    font-size: 15px;
+}
+
+.modal-title-upper {
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0;
+    word-spacing: 2px;
+    color: #737171;
+}
+
+.nav-icon {
+    font-size: 15px !important;
+}
+
+.form-control-lg {
+    font-size: 15px;
+}
+
+.btn-lg {
+    font-size: 16px;
+    padding: 12px 15px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+.alert-fixed-z-index {
+    position: fixed;
+    top: 2px;
+    right: 1px;
+    z-index: 1060
+}
+
+.text-light-50 {
+    color: #ccc;
+}
+
+.cursor-help {
+    cursor: help;
+}
+
+body {
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
