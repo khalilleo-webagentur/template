@@ -1,6 +1,6 @@
 <nav class="navbar bg-white">
   <div class="container-fluid">
-    <a href="./" class="navbar-brand">{{appName()}}</a>
+    <a href="{{app.request.schemeAndHttpHost}}" class="navbar-brand">{{appName()}}</a>
     <div class="d-flex">
       {% if is_granted('ROLE_USER') %}
       <div class="btn-group">

@@ -11,11 +11,11 @@
                 <div class="d-border p-4">
 
                     <div class="text-center pt-3">
-                        <a href="{{app.request.schemeAndHttpHost}}">
-                            <img src="{{asset('assets/img/logo.png')}}" alt="{{appName()}}">
-                        </a>
-                        <h3 class="my-1 text-center text-dark-50">Get Started</h3>
-                        <p class="text-center text-dark-50 mb-3">Sign up with work email</p>
+
+                        {% include 'component/logo.html.twig' %}
+
+                        <h3 class="my-1 text-center text-secondary">Get Started</h3>
+                        <p class="text-center text-secondary mb-3">Sign up with work email</p>
                     </div>
 
                     {% include 'component/form_alert.html.twig' %}
@@ -25,37 +25,33 @@
 
                         <div class="mb-3">
                             <input class="form-control" type="text" placeholder="Name" aria-label="Full-Name"
-                                name="name" required
-                                style="height: 46px; border-radius: 0;">
+                                name="name" required style="height: 46px; border-radius: 0;">
                         </div>
 
                         <div class="mb-3">
                             <input class="form-control" type="email" placeholder="Email" aria-label="Email"
-                                name="_username" required
-                                style="height: 46px; border-radius: 0;">
+                                name="_username" required style="height: 46px; border-radius: 0;">
                         </div>
 
                         <div class="form-check mb-3">
-                            <input class="form-check-input"
-                                style="background-color: #0000001c;border: 1px solid #535353;" type="checkbox"
-                                name="confirm" required id="confirm">
-                            <label class="form-check-label text-dark-50" for="confirm">
+                            <input class="form-check-input" type="checkbox" name="confirm" required id="confirm">
+                            <label class="form-check-label text-secondary fs-15" for="confirm">
                                 I accept {{appName()}}'s <a href="{{path('app_legal_privacy_policy')}}"
-                                    class="text-dark-50" rel="nofollow">
+                                    class="text-primary text-decoration-none" rel="nofollow">
                                     Privacy Policy
                                 </a>
                             </label>
                         </div>
 
                         <div class="mb-3">
-                            <button class="btn btn-success w-100" style="height: 46px; border-radius: 0;">
+                            <button class="btn btn-primary w-100" style="height: 46px; border-radius: 0;">
                                 Sign Up
                             </button>
                         </div>
                     </form>
 
                     <div class="my-3 text-center">
-                        <p class="text-dark-50"> Already have an account?
+                        <p class="text-secondary"> Already have an account?
                             <a href="{{path('app_login')}}" class="d-color text-decoration-none">Login</a>
                         </p>
                     </div>

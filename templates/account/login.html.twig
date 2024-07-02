@@ -11,13 +11,12 @@
                 <div class="d-border p-4">
 
                     <div class="text-center pt-3">
-                        <a href="{{app.request.schemeAndHttpHost}}">
-                            <img src="{{asset('assets/img/logo.png')}}" alt="{{appName()}}">
-                        </a>
 
-                        <h3 class="my-1 text-center text-dark-50">Sign In</h3>
+                        {% include 'component/logo.html.twig' %}
 
-                        <p class="text-center text-dark-50 mb-3">
+                        <h3 class="my-1 text-center text-secondary">Sign In</h3>
+
+                        <p class="text-center text-secondary mb-3">
                             Enter your OTP to continue.
                         </p>
                     </div>
@@ -39,13 +38,13 @@
                             <small class="text-secondary">Enter OTP that being sent to you</small>
                         </div>
                         <div class="mb-3">
-                            <button class="btn btn-success w-100" style="height: 46px; border-radius: 0;">Sign
+                            <button class="btn btn-primary w-100" style="height: 46px; border-radius: 0;">Sign
                                 In</button>
                         </div>
                     </form>
 
                     <div class="my-3 pt-3 text-center">
-                        <p class="text-dark-50">No OTP yet? <a href="{{path('app_auth')}}"
+                        <p class="text-secondary">No OTP yet? <a href="{{path('app_auth')}}"
                                 class="d-color text-decoration-none">
                                 Request new one!</a>
                         </p>
