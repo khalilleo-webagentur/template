@@ -1,4 +1,4 @@
-{% extends 'admin/layout/base.html.twig' %}
+{% extends 'dashboard/layout/base.html.twig' %}
 
 {% block title %} Dashboard :: Edit User Details {% endblock %}
 
@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-4">
                     <div class="breadcrumb float-right">
-                        <a href="{{path('app_admin_users_index')}}" class="text-secondary">
+                        <a href="{{path('app_dashboard_users_index')}}" class="text-secondary">
                             Close <span class="fa fa-window-close"></span>
                         </a>
                     </div>
@@ -28,7 +28,7 @@
 
             <div class="row">
                 <div class="col-lg-6">
-                    <form action="{{path('app_admin_user_store', {id:user.id})}}" method="post">
+                    <form action="{{path('app_dashboard_user_store', {id:user.id})}}" method="post">
 
                     <div class="row">
                         <div class="mb-3 col-lg-6">
@@ -70,7 +70,7 @@
                         </div>
 
                        
-                        {% include "admin/component/edit_save_btn.html.twig" %}
+                        {% include "dashboard/component/edit_save_btn.html.twig" %}
                         
                     </form>
                 </div>

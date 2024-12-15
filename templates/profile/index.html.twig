@@ -24,7 +24,7 @@
                         <div class="col-10">
                             <p class="float-end small md-d-none">
                                 {% if is_granted('ROLE_SUPER_ADMIN') %}
-                                <a href="{{path('app_admin_index')}}" class="text-decoration-none">Dashboard</a>
+                                <a href="{{path('app_dashboard_index')}}" class="text-decoration-none">Dashboard</a>
                                 {% endif %}
                             </p>
                             <p class="text-secondary pt-3">Username: {{app.user.name}}</p>

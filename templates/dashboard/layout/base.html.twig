@@ -42,12 +42,12 @@
 
     <div class="hold-transition sidebar-mini layout-fixed">
         <div class="wrapper">
-            {% include 'admin/layout/navbar.html.twig' %}
+            {% include 'dashboard/layout/navbar.html.twig' %}
             {% include 'component/lte_custom_type_message_top_fixed.html.twig' %}
-            {% include 'admin/layout/sidebar.html.twig' %}
+            {% include 'dashboard/layout/sidebar.html.twig' %}
             {% block body %} {% endblock %}
         </div>
-        {% include 'admin/layout/footer.html.twig' %}
+        {% include 'dashboard/layout/footer.html.twig' %}
     </div>
 
     {% block javascripts %}

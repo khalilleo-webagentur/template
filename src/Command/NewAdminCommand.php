@@ -63,12 +63,12 @@ class NewAdminCommand extends Command
 
             $this->userSettingService->save($userSetting->setUser($user));
 
-            $output->writeln(sprintf('Admin added. E:: %s and OTP:: %s', $email, $code));
+            $output->writeln(sprintf('Dashboard added. E:: %s and OTP:: %s', $email, $code));
 
             return self::SUCCESS;
         }
 
-        $output->writeln('Admin cannot be created ...');
+        $output->writeln('Dashboard cannot be created ...');
 
         return self::FAILURE;
     }

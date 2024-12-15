@@ -20,7 +20,7 @@ class UpdateEmailController extends AbstractController
 {
     use FormValidationTrait;
 
-    private const APP_PROFILE = 'app_profile';
+    private const APP_PROFILE = 'app_profile_index';
     private const APP_AUTH = 'app_auth';
 
     public function __construct(
@@ -72,7 +72,7 @@ class UpdateEmailController extends AbstractController
     }
 
     #[Route('/p/u/verify/{token}', name: 'app_profile_personal_data_email_verify')]
-    public function verifiyEmail(?string $token): RedirectResponse
+    public function verifyEmail(?string $token): RedirectResponse
     {
         $token = $this->validate($token);
 

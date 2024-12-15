@@ -24,7 +24,7 @@ class RegisterController extends AbstractController
     private const HOME_ROUTE = 'app_home';
     private const LOGIN_ROUTE = 'app_login';
     private const REGISTER_ROUTE = 'app_register';
-    private const PROFILE_ROUTE = 'app_profile';
+    private const PROFILE_ROUTE = 'app_profile_index';
     private const AUTH_ROUTE = 'app_auth';
 
     public function __construct(

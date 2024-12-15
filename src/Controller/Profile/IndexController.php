@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class IndexController extends AbstractController
 {
-    #[Route('/profile/u8k8s5b5n0i6d9a0', name: 'app_profile')]
+    #[Route('/profile/u8k8s5b5n0i6d9a0', name: 'app_profile_index')]
     public function index(Request $request): Response
     {
         if (!$this->getUser()) {
@@ -25,7 +25,7 @@ class IndexController extends AbstractController
         $this->denyAccessUnlessGranted('ROLE_USER');
 
         return $this->render('profile/index.html.twig', [
-            'email' => $this->getParameter('info_emal'),
+            'email' => $this->getParameter('infoEmail'),
         ]);
     }
 }

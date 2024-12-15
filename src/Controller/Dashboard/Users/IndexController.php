@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Controller\Admin\Users;
+namespace App\Controller\Dashboard\Users;
 
 use App\Service\UserService;
 use App\Traits\FormValidationTrait;
@@ -12,31 +12,31 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-#[Route('admin/dashboard/c2o5i0p7v6s5p4w5')]
+#[Route('dashboard/c2o5i0p7v6s5p4w5')]
 class IndexController extends AbstractController
 {
     use FormValidationTrait;
 
-    private const ADMIN_USERS_ROUTE = 'app_admin_users_index';
+    private const ADMIN_USERS_ROUTE = 'app_dashboard_users_index';
 
     public function __construct(
         private readonly UserService $userService
     ) {
     }
 
-    #[Route('/users/home', name: 'app_admin_users_index')]
+    #[Route('/users/home', name: 'app_dashboard_users_index')]
     public function index(): Response
     {
         $this->denyAccessUnlessGranted('ROLE_SUPER_ADMIN');
 
         $users = $this->userService->getAll();
 
-        return $this->render('admin/users/index.html.twig', [
+        return $this->render('dashboard/users/index.html.twig', [
             'users' => $users,
         ]);
     }
 
-    #[Route('/user/edit/{id}', name: 'app_admin_user_edit')]
+    #[Route('/user/edit/{id}', name: 'app_dashboard_user_edit')]
     public function edit(?string $id): Response
     {
         $this->denyAccessUnlessGranted('ROLE_SUPER_ADMIN');
@@ -50,12 +50,12 @@ class IndexController extends AbstractController
             return $this->redirectToRoute(self::ADMIN_USERS_ROUTE);
         }
 
-        return $this->render('admin/users/edit.html.twig', [
+        return $this->render('dashboard/users/edit.html.twig', [
             'user' => $user,
         ]);
     }
 
-    #[Route('/user/store/{id}', name: 'app_admin_user_store', methods: 'POST')]
+    #[Route('/user/store/{id}', name: 'app_dashboard_user_store', methods: 'POST')]
     public function store(?string $id, Request $request): RedirectResponse
     {
         $this->denyAccessUnlessGranted('ROLE_SUPER_ADMIN');

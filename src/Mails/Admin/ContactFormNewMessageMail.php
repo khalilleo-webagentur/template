@@ -8,7 +8,6 @@ use App\Mails\AbstractMail;
 use App\Mails\MailInterface;
 use App\Service\ConfigService;
 use App\Service\Dev\Mailer;
-use App\Service\MonologService;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Address;
@@ -17,16 +16,15 @@ final class ContactFormNewMessageMail extends AbstractMail implements MailInterf
 {
     public function __construct(
         private readonly MailerInterface $mailer,
-        private readonly ConfigService $configService,
-        private readonly MonologService $monolog
+        private readonly ConfigService $configService
     ) {
     }
 
     public function send(...$context): void
     {
-        $webmasterName = $this->configService->getParameter('webmaster_name');
+        $webmasterName = $this->configService->getParameter('webmasterName');
         
-        $webmasterEmail = $this->configService->getParameter('webmaster_email');
+        $webmasterEmail = $this->configService->getParameter('webmasterEmail');
 
         $email = (new TemplatedEmail())
             ->from(
@@ -42,7 +40,7 @@ final class ContactFormNewMessageMail extends AbstractMail implements MailInterf
                 'username' => $webmasterName
             ]);
 
-        Mailer:: catch(sprintf('Admin has been informed. Email was sent to [%s]', $webmasterEmail));
+        Mailer:: catch(sprintf('Dashboard has been informed. Email was sent to [%s]', $webmasterEmail));
 
         $this->mailer->send($email);
     }

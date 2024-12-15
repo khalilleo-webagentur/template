@@ -22,7 +22,7 @@ class AuthenticateController extends AbstractController
     private const HOME_ROUTE = 'app_home';
     private const LOGIN_ROUTE = 'app_login';
     private const AUTHENTICATE_ROUTE = 'app_auth';
-    private const PROFILE_ROUTE = 'app_profile';
+    private const PROFILE_ROUTE = 'app_profile_index';
 
     public function __construct(
         private readonly UserService $userService,
