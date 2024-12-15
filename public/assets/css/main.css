@@ -51,10 +51,15 @@ input[type="color"]:focus,
 .form-select:focus,
 .form-control .btn:active,
 .btn:focus .uneditable-input:focus {
-    border-color: none;
     outline: 0 none;
     border: 1px solid #0d6dfd91 !important;
     box-shadow: none !important;
+}
+
+.btn {
+    padding: 7px 14px !important;
+    border-radius: 5px !important;
+    font-size: 15px !important;
 }
 
 .bg-placeholder {

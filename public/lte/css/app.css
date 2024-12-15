@@ -2,7 +2,7 @@ p, td, td > *, a, form > span {
     font-size: 15px !important;
 }
 
-label, label:not(.form-check-label):not(.custom-file-label){
+label, label:not(.form-check-label):not(.custom-file-label) {
     margin-bottom: 1px;
     font-weight: 500;
 }
@@ -14,7 +14,7 @@ label, label:not(.form-check-label):not(.custom-file-label){
     font-size: 15px;
 }
 
-.btn-outline-secondary{
+.btn-outline-secondary {
     text-transform: capitalize;
     border-radius: 3px;
     padding: 6px 10px;
@@ -70,6 +70,15 @@ label, label:not(.form-check-label):not(.custom-file-label){
     cursor: help;
 }
 
+.area-section {
+    border-radius: 10px !important;
+    background-color: #fff !important;
+    margin-bottom: 15px !important;
+    border: 1px solid #ece9e9 !important;
+    opacity: .9 !important;
+    padding: 15px !important;
+}
+
 body {
     -webkit-animation: fadein 2s;
     -moz-animation: fadein 2s;
@@ -121,4 +130,57 @@ body {
     to {
         opacity: 1;
     }
+}
+
+.modal-info {
+    border-left: 3px solid #1e4eac;
+    padding: 14px 14px;
+    background: #e5eaf782;
+    color: #1e4eac;
+    font-size: 14px !important;
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    user-select: none;
+    margin-bottom: 10px;
+}
+
+.modal-warning {
+    border-left: 3px solid #95720c;
+    padding: 14px 14px;
+    background: #f2efe4;
+    color: #95720c;
+    font-size: 14px !important;
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    user-select: none;
+    margin-bottom: 10px;
+}
+
+.modal-danger {
+    border-left: 3px solid #f70404;
+    padding: 14px 14px;
+    background: #ffc5c554;
+    color: #f70404;
+    font-size: 14px !important;
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    user-select: none;
+    margin-bottom: 10px;
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: rgba(246, 244, 244, 0.55) !important;
+}
+
+.form-control:disabled:focus, .form-control:focus[readonly] {
+    border: 1px solid #f89797 !important;
+    background-color: rgba(250, 223, 223, 0.49) !important;
+    cursor: not-allowed;
+}
+
+.table thead th & .table td, .table th {
+    border-bottom: 1px solid rgba(212, 214, 216, 0.65) !important;
 }
