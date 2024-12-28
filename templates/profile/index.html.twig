@@ -19,7 +19,9 @@
 
                     {% if is_granted('ROLE_SUPER_ADMIN') %}
                         <a href="{{path('app_dashboard_index')}}" class="float-end small p-2">
-                            <small>Dashboard</small>
+                            <small>
+                                Dashboard <span class="bi bi-arrow-right"></span>
+                            </small>
                         </a>
                     {% endif %}
 
