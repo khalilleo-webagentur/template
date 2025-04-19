@@ -184,3 +184,10 @@ body {
 .table thead th & .table td, .table th {
     border-bottom: 1px solid rgba(212, 214, 216, 0.65) !important;
 }
+
+@media (max-width: 500px) {
+    .md-text-center {
+        text-align: center;
+    }
+}
+

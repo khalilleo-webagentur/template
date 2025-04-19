@@ -31,6 +31,12 @@ final class UserService
         return $this->userRepository->findOneBy(['token' => $token]);
     }
 
+    public function hasUserRequestedNewSecurityCode(): bool
+    {
+        $users = $this->userRepository->findTheLastRecentToken();
+        return count($users) > 0;
+    }
+
     /**
      * @return User[]
      */
