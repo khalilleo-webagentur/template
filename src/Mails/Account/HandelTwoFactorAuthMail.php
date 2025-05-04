@@ -34,6 +34,7 @@ final class HandelTwoFactorAuthMail extends AbstractMail implements MailInterfac
             ->to(new address($userEmail, $username))
             ->subject('Two-Step Verification')
             ->htmlTemplate('mails/account/send_otp.html.twig')
+            ->textTemplate('mails/account/send_otp.txt.twig')
             ->context([
                 'username' => $username,
                 'otp' => $otp,

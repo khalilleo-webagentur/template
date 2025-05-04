@@ -1,0 +1,19 @@
+Hi {{ username|capitalize }},
+
+Your OTP (one time password) is:
+
+{{ otp }}
+
+Please do not share your OTP with anyone.
+
+Thanks,
+
+The {{ appName() }} Team
+
+------------------------------------------------------------------------------
+
+Copyright {{ appName() }} {{ year() }}
+
+{{ 'All Rights Reserved'|trans }} - {{ version() }}
+
+{{ 'Contact Form'|trans }} {{ absolute_url(path('app_home')) }}
