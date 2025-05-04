@@ -52,7 +52,6 @@ class UserRepository extends ServiceEntityRepository
             ->andWhere('t1.updatedAt >= :now')
             ->setParameter('now', $now)
             ->getQuery()
-            ->getResult()
-            ;
+            ->getResult();
     }
 }

@@ -28,10 +28,11 @@ class NewAdminCommand extends Command
     public const SUCCESS = 1;
 
     public function __construct(
-        private readonly UserService $userService,
+        private readonly UserService           $userService,
         private readonly TokenGeneratorService $tokenGeneratorService,
-        private readonly UserSettingService $userSettingService
-    ) {
+        private readonly UserSettingService    $userSettingService
+    )
+    {
         parent::__construct();
     }
 

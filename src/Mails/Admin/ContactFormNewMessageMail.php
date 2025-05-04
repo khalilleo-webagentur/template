@@ -16,14 +16,15 @@ final class ContactFormNewMessageMail extends AbstractMail implements MailInterf
 {
     public function __construct(
         private readonly MailerInterface $mailer,
-        private readonly ConfigService $configService
-    ) {
+        private readonly ConfigService   $configService
+    )
+    {
     }
 
     public function send(...$context): void
     {
         $webmasterName = $this->configService->getParameter('webmasterName');
-        
+
         $webmasterEmail = $this->configService->getParameter('webmasterEmail');
 
         $email = (new TemplatedEmail())

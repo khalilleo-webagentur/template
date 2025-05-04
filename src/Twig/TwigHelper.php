@@ -15,7 +15,8 @@ class TwigHelper extends AbstractExtension
 {
     public function __construct(
         private readonly ConfigService $configService
-    ) {
+    )
+    {
     }
 
     public function getFunctions(): array
