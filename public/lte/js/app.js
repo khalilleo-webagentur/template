@@ -13,3 +13,11 @@ $(document).ready(function () {
         });
     }
 });
+
+// blur images
+window.addEventListener('load', function() {
+    const image = document.querySelector('img');
+    if (image) {
+        image.style.filter = 'blur(0)';
+    }
+});
