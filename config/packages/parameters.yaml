@@ -16,6 +16,7 @@ parameters:
   addressCountry: 'Deutschland'
 
   app_version: "1.7.5"
+  cache_expires_datetime: "2025-12-31 00:00:00"
   app_author: "Khalilleo Teams"
   app_created: "2024-07-01"
   app_made_by: "khalilleo.com"

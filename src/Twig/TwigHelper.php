@@ -22,6 +22,7 @@ class TwigHelper extends AbstractExtension
     public function getFunctions(): array
     {
         return [
+            new TwigFunction('cacheExpiresDatetime', [$this, 'cacheExpiresDatetime']),
             new TwigFunction('hash', [$this, 'hash']),
             new TwigFunction('timeAgo', [$this, 'timeAgo']),
             new TwigFunction('formatSizeUnits', [$this, 'formatSizeUnits']),
@@ -38,6 +39,12 @@ class TwigHelper extends AbstractExtension
             new TwigFunction('madeBy', [$this, 'getMadeBy']),
             new TwigFunction('version', [$this, 'getVersion']),
         ];
+    }
+
+    public function cacheExpiresDatetime(): string
+    {
+        $timestamp = strtotime($this->configService->getParameter('cache_expires_datetime'));
+        return date('D, d M Y H:i:s T', $timestamp);
     }
 
     public function hash(string $text): string

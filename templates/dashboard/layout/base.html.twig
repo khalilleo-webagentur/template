@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="de">
-
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="csrf-token" content="cf6f861916b2e16b2cf884a222ac134f2fb7620d"/>
-    <meta http-equiv="pragma" content="no-cache">
-    <meta http-equiv="cache-control" content="NO-CACHE">
+    <meta name="csrf-token" content="{{ csrf_token('meta') }}"/>
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <meta name="referrer" content="origin">
     <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta property="og:locale" content="de_DE"/>
+    <meta property="og:locale" content="en_EN"/>
 
     <title> {% block title %}{% endblock %} </title>
 
@@ -27,10 +24,15 @@
     <meta name="author" content="khalilleo Team">
     <meta name="created" content="03-03-2024"/>
     <meta content="telephone=no" name="format-detection"/>
-    <link rel='dns-prefetch' href='//www.example.de'/>
+
+    <meta http-equiv="Cache-Control" content="public, max-age=86400">
+    <meta http-equiv="Expires" content="{{ cacheExpiresDatetime() }}">
+    <link rel='preconnect' href='{{ app.request.schemeAndHttpHost }}'/>
+    <link rel='dns-prefetch' href='//{{ app.request.schemeAndHttpHost }}'/>
 
     {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('lte/css/root.min.css?v=3.4.0') }}">
+        <link rel="stylesheet" href="{{ asset('lte/lib/adminlte/css/root.min.css?v=3.4.0') }}">
+        <link rel="stylesheet" href="{{ asset('lte/lib/fontawesome/fontawesome-icons.css?v=5.13.0') }}">
         <link rel="stylesheet" href="{{ asset('lte/css/app.css?v=1.0.0') }}">
     {% endblock %}
 
@@ -51,7 +53,8 @@
 </div>
 
 {% block javascripts %}
-    <script src="{{ asset('lte/js/root.min.js?v=3.4.0') }}"></script>
+    <script src="{{ asset('lte/lib/bootstrap/js/jquery.min.js?v=3.4.1') }}"></script>
+    <script src="{{ asset('lte/lib/adminlte/js/root.min.js?v=3.4.0') }}" defer></script>
     <script src="{{ asset('lte/js/app.js?v=1.0.0') }}"></script>
 {% endblock %}
 </body>
