@@ -12,7 +12,8 @@
         <tr>
             <td class="content-block powered-by">
                 <a href="{{ absolute_url(path('app_home')) }}" rel="nofollow,noindex,noopnner">
-                    <img src="{{ absolute_url(asset('favicon.ico')) }}" alt="{{ appName() }}" width="20"
+                    <img loading="lazy" decoding="async"
+                         src="{{ absolute_url(asset('favicon.ico')) }}" alt="{{ appName() }}" width="20"
                          height="20">
                 </a>
             </td>
